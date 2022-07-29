@@ -40,10 +40,10 @@ div {text-align: center;}
 <form action="{{ url_for('predict')}}"method="get">
 <div class="form-floating mb-3">
 
-
+<br>
 <input type="number" class="form-control" id="exp" name="exp" step="any" min="0" max="100" placeholder="0" required="required">
 <label for="floatingInput">Enter area in square foot</label>
-</div>
+
 <br>
 <label for="floatingInput">Enter number of bedrooms</label>
 <input type="number" class="form-control" id="exp1" name="exp1" step="any" min="0" max="5" placeholder="0" required="required">
@@ -54,6 +54,7 @@ div {text-align: center;}
 <label for="floatingInput">Enter offers</label>  
 <input type="number" class="form-control" id="exp3" name="exp3" step="any" min="0" max="5" placeholder="0" required="required">
 <br>
+</div>      
 <label for="Bricks"><h6>Do you want your house made with bricks:</h6></label>
   <select name="Bricks" id="Bricks">
     <option value="Yes">Yes</option>
@@ -74,7 +75,7 @@ div {text-align: center;}
 <br>
 <br>
 
-{{ prediction_text }}
+"{{ prediction_text }}"
 </div>
 
 <div class="" style="background-color:blue;" >
