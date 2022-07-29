@@ -11,7 +11,7 @@ model = pickle.load(open('house_project2.pkl','rb'))
 @app.route('/')
 def home():
   
-    return render_template("index.html")
+    return render_template("show.html")
   
 @app.route('/predict',methods=['GET'])
 def predict():
