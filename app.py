@@ -16,18 +16,15 @@ def home():
 @app.route('/predict',methods=['GET'])
 def predict():
     
-    
-    '''
-    For rendering results on HTML GUI
-    '''
+  
     exp = float(request.args.get('exp'))
     exp1 = float(request.args.get('exp1'))
     exp2= float(request.args.get('exp2'))
     exp3= float(request.args.get('exp3'))
-    exp4= float(request.args.get('Bricks'))
-    exp5= float(request.args.get('neighbourhood'))
+    Bricks= float(request.args.get('Bricks'))
+    neighbourhood= float(request.args.get('neighbourhood'))
     
-    prediction = model.predict([[exp,exp1,exp2,exp3,exp4,exp5]])
+    prediction = model.predict([[exp,exp1,exp2,exp3,Bricks,neighbourhood]])
 
     return render_template('show.html', prediction_text='Regression Model  has predicted price for the house : {}'.format(prediction))
   
