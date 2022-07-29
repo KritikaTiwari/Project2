@@ -29,7 +29,7 @@ def predict():
     
     prediction = model.predict([[exp,exp1,exp2,exp3,exp4,exp5]])
 
-    return render_template('index.html', prediction_text='Regression Model  has predicted price for the house : {}'.format(prediction))
+    return render_template('show.html', prediction_text='Regression Model  has predicted price for the house : {}'.format(prediction))
   
 if __name__ == "__main__":
     app.run(debug=True)
