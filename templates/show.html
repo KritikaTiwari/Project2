@@ -38,36 +38,38 @@ div {text-align: center;}
 
 <form action="{{ url_for('predict')}}"method="get">
 <div class="form-floating mb-3">
-
+<br>
 <br>
 <input type="number" class="form-control" id="exp" name="exp" step="any" min="0" max="100" placeholder="0" required="required">
 <label for="floatingInput">Enter area in square foot</label>
-</div>
+<br>
 <br>
 <label for="floatingInput">Enter number of bedrooms</label>
 <input type="number" class="form-control" id="exp1" name="exp1" step="any" min="0" max="5" placeholder="0" required="required">
 <br>
+<br>
  <label for="floatingInput">Enter number of bathrooms</label>     
 <input type="number" class="form-control" id="exp2" name="exp2" step="any" min="0" max="5" placeholder="0" required="required">
+<br>
 <br>
 <label for="floatingInput">Enter offers</label>  
 <input type="number" class="form-control" id="exp3" name="exp3" step="any" min="0" max="5" placeholder="0" required="required">
 <br>
-    
-<label for="Bricks"><h6>Do you want your house made with bricks:</h6></label>
-  <select name="Bricks" id="Bricks">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
+<br> 
+<label for="exp4"><h6>Do you want your house made with bricks:</h6></label>
+  <select name="exp4" id="exp4">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
   </select>
 <br>
-
-<label for="neighbourhood"><h6>Choose your neighbourhood:</h6></label>
-  <select name="neighbourhood" id="neighbourhood">
-    <option value="East">East</option>
-    <option value="West">West</option>
-    <option value="North">North</option>
+<br>
+<label for="exp5"><h6>Choose your neighbourhood:</h6></label>
+  <select name="exp5" id="exp5">
+    <option value="1">East</option>
+    <option value="2">West</option>
+    <option value="3">North</option>
   </select>
-
+<br>
 <br>
 <button type="submit" class="btn btn-primary btn-block btn-large">Price</button>
 </form>
