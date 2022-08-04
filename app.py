@@ -21,9 +21,9 @@ def predict():
     exp1 = float(request.args.get('exp1'))
     exp2= float(request.args.get('exp2'))
     exp3= float(request.args.get('exp3'))
-    Bricks=float(request.args.get('Bricks'))
-    neighbourhood=float(request.args.get('neighbourhood'))
-    prediction = model.predict([[exp,exp1,exp2,exp3,Bricks,neighbourhood]])
+    exp4=float(request.args.get('exp4'))
+    exp5=float(request.args.get('exp5'))
+    prediction = model.predict([[exp,exp1,exp2,exp3,exp4,exp5]])
 
     return render_template('show.html', prediction_text='Regression Model  has predicted price for the house : {}'.format(prediction))
   
