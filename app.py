@@ -5,7 +5,7 @@ import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('house2.pkl','rb')) 
+model = pickle.load(open('house.pkl','rb')) 
 
 
 @app.route('/')
